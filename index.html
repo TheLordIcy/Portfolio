@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <nav>
+        <ul class="SideBar">
+            <li onclick="closeSideBar()">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgb(0,0,0)">
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                    </svg>
+                </a>
+            </li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">ICY</a></li>
+            <li class="hideOnMobile"><a href="#">Service</a></li>
+            <li class="hideOnMobile"><a href="#">Projects</a></li>
+            <li class="hideOnMobile"><a href="#">Contact</a></li>
+            <li class="menu-button" onclick="showSideBar()">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgb(0,0,0)">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        const sidebar = document.querySelector(".SideBar");
+
+        function showSideBar() {
+            sidebar.classList.add("open");
+        }
+
+        function closeSideBar() {
+            sidebar.classList.remove("open");
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+<!--this website is made by ayushmaan bakshi Aka ICY
+    Insta = @thelord.ice
+    GitHub = -->

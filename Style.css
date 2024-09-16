@@ -6,7 +6,7 @@
     padding: 0;
 }
 
-body {
+.HomeSection {
     min-height: 100vh;
     background-image: url(BGImage.jpg);
     background-size: cover;

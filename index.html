@@ -18,15 +18,15 @@
                         </svg>
                     </a>
                 </li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li onclick="closeSideBar()"><a href="#Service">Service</a></li>
+                <li onclick="closeSideBar()"><a href="#Projects">Projects</a></li>
+                <li onclick="closeSideBar()"><a href="#Contact">Contact</a></li>
             </ul>
             <ul>
-                <li><a href="#">ICY</a></li>
-                <li class="hideOnMobile"><a href="#">Service</a></li>
-                <li class="hideOnMobile"><a href="#">Projects</a></li>
-                <li class="hideOnMobile"><a href="#">Contact</a></li>
+                <li><a href="#Home">ICY</a></li>
+                <li class="hideOnMobile"><a href="#Service">Service</a></li>
+                <li class="hideOnMobile"><a href="#Projects">Projects</a></li>
+                <li class="hideOnMobile"><a href="#Contact">Contact</a></li>
                 <li class="menu-button" onclick="showSideBar()">
                     <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgb(0,0,0)">
@@ -36,7 +36,7 @@
                 </li>
             </ul>
         </nav>
-        <div class="MSec">
+        <div id="Home"   class="MSec">
             <div class="Welcometext">
                 <h1>Welcome</h1>
                 <p>Hello! I am Ayushmaan, a hobbyist,
@@ -49,6 +49,12 @@
 
 
     </div>
+
+    <section class="OtherSec" id="Service"><h1>Service</h1></section>
+    <section class="OtherSec" id="Projects"><h1>Projects</h1></section>
+    <section class="OtherSec" id="Contact"><h1>Contact</h1></section>
+
+
 
     <script>
         const sidebar = document.querySelector(".SideBar");

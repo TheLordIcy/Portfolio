@@ -4,6 +4,7 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .HomeSection {
@@ -24,7 +25,13 @@
     align-items: center;
 }
 
+.Welcometext h1{
+    text-decoration:underline dashed;
+}
+
 .Welcometext{
+    /*height: 50%;*/
+    width: 70%;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -36,17 +43,28 @@
     color: rgb(255, 255, 255);
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.253);
     padding: 60px;
+    z-index: 10;
+    
+
 }
 
 .Welcometext p{
-    font-size: larger;
+    font-size: 200%;
     text-align: center;
     padding: 20px;
+}
+
+.Welcometext h1{
+    font-size: 450%;
 }
 
 nav {
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 nav ul {
@@ -69,6 +87,7 @@ nav a {
     align-items: center;
     color: black;
     font-size: large;
+    
 }
 
 nav a:hover {
@@ -107,7 +126,6 @@ nav li:first-child {
 
 .SideBar li:first-child {
     width: 100%;
-    margin-right: auto;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -138,4 +156,21 @@ nav li:first-child {
     .SideBar {
         width: 100%;
     }
+}
+
+
+.OtherSec{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    background-color: rgb(255, 202, 202);
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+    text-decoration:underline dashed ;
+}
+
+.OtherSec:nth-child(odd){
+    background-color: rgb(255, 228, 228);
 }

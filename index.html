@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICY — Front End Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Syne (display) + Space Mono (mono accent) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- Boxicons for skill + social icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       CUSTOM CURSOR
+  ════════════════════════════════════════════════ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">ICY<span class="dot">.</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero"     class="nav-link active">Home</a></li>
+      <li><a href="#about"    class="nav-link">About</a></li>
+      <li><a href="#projects" class="nav-link">Work</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#contact"  class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+
+    <!-- Animated grid background -->
+    <div class="hero-grid"></div>
+
+    <!-- Glitch blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-anim="fade-up">Hello, world. I'm</p>
+      <h1 class="hero-name glitch" data-text="ICY" data-anim="fade-up" data-delay="100">ICY</h1>
+      <div class="hero-role" data-anim="fade-up" data-delay="200">
+        <span class="role-static">I build&nbsp;</span>
+        <span class="role-typed" id="typedText"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-tagline" data-anim="fade-up" data-delay="300">
+        Crafting pixel-perfect interfaces where clean code meets bold design.<br />
+        From concept to deployment — I make the web feel alive.
+      </p>
+      <div class="hero-cta" data-anim="fade-up" data-delay="400">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact"  class="btn btn-outline">Let's Talk</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       ABOUT SECTION
+  ════════════════════════════════════════════════ -->
+  <section class="about section" id="about">
+    <div class="container">
+
+      <div class="about-grid">
+
+        <!-- Right: bio + skills -->
+        <div class="about-text" data-anim="fade-left">
+          <p class="section-label">// about_me</p>
+          <h2 class="section-title">
+            Building digital<br/><em>experiences</em> that matter.
+          </h2>
+          <p class="about-bio">
+            I'm ICY — a front-end developer obsessed with turning complex ideas into elegant, 
+            lightning-fast web experiences. I blend technical precision with a designer's eye, 
+            creating interfaces that don't just work — they <strong>wow</strong>.
+          </p>
+          <p class="about-bio">
+            When I'm not pushing pixels, I'm deep in design systems, accessibility research, 
+            or exploring the bleeding edge of web animation.
+          </p>
+
+          <!-- Skills grid -->
+          <div class="skills-grid">
+            <div class="skill-chip"><i class='bx bxl-html5'></i> HTML5</div>
+            <div class="skill-chip"><i class='bx bxl-css3'></i> CSS3</div>
+            <div class="skill-chip"><i class='bx bxl-javascript'></i> JavaScript</div>
+            <div class="skill-chip"><i class='bx bxl-react'></i> React</div>
+            <div class="skill-chip"><i class='bx bxl-figma'></i> Figma</div>
+            <div class="skill-chip"><i class='bx bxl-git'></i> Git</div>
+            <div class="skill-chip"><i class='bx bxl-tailwind-css'></i> Tailwind</div>
+            <div class="skill-chip"><i class='bx bxl-nodejs'></i> Node.js</div>
+          </div>
+
+          <!-- Proficiency bars -->
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>HTML / CSS</span><span>95%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>JavaScript / React</span><span>85%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span>UI/UX Design</span><span>80%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary mt-24">Work With Me</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       PROJECTS SECTION
+  ════════════════════════════════════════════════ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+
+      <div class="section-header" data-anim="fade-up">
+        <p class="section-label">// selected_work</p>
+        <h2 class="section-title">Things I've <em>built</em>.</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Card 1 -->
+        <article class="project-card" data-anim="fade-up" data-delay="0">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80"
+                 alt="NeonShop e-commerce" class="project-img" />
+            <div class="project-overlay">
+              <a href="#" class="project-link-btn" aria-label="View project">
+                <i class='bx bx-link-external'></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>React</span><span>CSS Modules</span><span>Stripe</span>
+            </div>
+            <h3 class="project-title">Still In Progress</h3>
+            <p class="project-desc">A full-featured e-commerce storefront with real-time cart, animated product reveals, and seamless Stripe checkout integration.</p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="project-card" data-anim="fade-up" data-delay="100">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&q=80"
+                 alt="Pulse Dashboard" class="project-img" />
+            <div class="project-overlay">
+              <a href="#" class="project-link-btn" aria-label="View project">
+                <i class='bx bx-link-external'></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>JavaScript</span><span>Chart.js</span><span>REST API</span>
+            </div>
+            <h3 class="project-title">Not Started</h3>
+            <p class="project-desc">Analytics dashboard with live data feeds, animated charts, and a dark-mode-first design system built for speed.</p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="project-card" data-anim="fade-up" data-delay="200">
+          <div class="project-img-wrap">
+            <img src="Images/Untitled.png"
+                 alt="Agency Landing" class="project-img" />
+            <div class="project-overlay">
+              <a href="#" class="project-link-btn" aria-label="View project">
+                <i class='bx bx-link-external'></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>Blender</span><span>Unity</span>
+            </div>
+            <h3 class="project-title">Unity Assets</h3>
+            <p class="project-desc">Award-shortlisted marketing agency landing page featuring scroll-triggered animations, parallax layers, and a fluid cursor.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SERVICES SECTION
+  ════════════════════════════════════════════════ -->
+  <section class="services section" id="services">
+    <div class="container">
+
+      <div class="section-header" data-anim="fade-up">
+        <p class="section-label">// what_i_offer</p>
+        <h2 class="section-title">Services that <em>move</em> brands.</h2>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card" data-anim="fade-up" data-delay="0">
+          <div class="service-icon"><i class='bx bx-code-alt'></i></div>
+          <h3>Web Development</h3>
+          <p>Fast, accessible, and responsive websites built with clean code. From landing pages to full-scale web apps.</p>
+          <div class="service-num">01</div>
+        </div>
+
+        <div class="service-card" data-anim="fade-up" data-delay="100">
+          <div class="service-icon"><i class='bx bx-paint'></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Beautiful, intuitive interfaces grounded in user research. Wireframes, prototypes, and full design systems.</p>
+          <div class="service-num">02</div>
+        </div>
+
+        <div class="service-card" data-anim="fade-up" data-delay="200">
+          <div class="service-icon"><i class='bx bx-trending-up'></i></div>
+          <h3>Social Media Ads</h3>
+          <p>High-converting paid ad creatives and campaigns across Instagram, TikTok, Facebook, and X (Twitter).</p>
+          <div class="service-num">03</div>
+        </div>
+
+        <div class="service-card" data-anim="fade-up" data-delay="300">
+          <div class="service-icon"><i class='bx bx-diamond'></i></div>
+          <h3>3D Modelling</h3>
+          <p>Logo design, brand guidelines, and visual identity systems that make your brand impossible to forget.</p>
+          <div class="service-num">04</div>
+        </div>
+
+        <div class="service-card" data-anim="fade-up" data-delay="400">
+          <div class="service-icon"><i class='bx bx-camera'></i></div>
+          <h3>Content Creation</h3>
+          <p>Scroll-stopping graphics, reels, and social content tailored to your brand voice and target audience.</p>
+          <div class="service-num">05</div>
+        </div>
+
+        <div class="service-card" data-anim="fade-up" data-delay="500">
+          <div class="service-icon"><i class='bx bx-bar-chart-alt-2'></i></div>
+          <h3>Growth Marketing</h3>
+          <p>Data-driven strategies for audience growth, conversion optimization, and measurable ROI across channels.</p>
+          <div class="service-num">06</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       CONTACT SECTION
+  ════════════════════════════════════════════════ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+
+      <div class="contact-grid">
+
+        <!-- Left info -->
+        <div class="contact-info" data-anim="fade-right">
+          <p class="section-label">// get_in_touch</p>
+          <h2 class="section-title">Let's create<br/>something <em>great</em>.</h2>
+          <p class="contact-desc">
+            Have a project in mind? Looking to partner or hire? 
+            Drop me a message and I'll get back to you within 24 hours.
+          </p>
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <i class='bx bx-envelope'></i>
+              <span>hello@icy.dev</span>
+            </div>
+            <div class="contact-detail-item">
+              <i class='bx bx-map'></i>
+              <span>Available Worldwide · Remote</span>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+            <a href="#" class="social-link" aria-label="Twitter/X"><i class='bx bxl-twitter'></i></a>
+            <a href="#" class="social-link" aria-label="Dribbble"><i class='bx bxl-dribbble'></i></a>
+          </div>
+        </div>
+
+        <!-- Right form -->
+        <div class="contact-form-wrap" data-anim="fade-left">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project inquiry" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              Send Message <i class='bx bx-send'></i>
+            </button>
+            <p class="form-success" id="formSuccess">
+              <i class='bx bx-check-circle'></i> Message sent! I'll reply soon.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">ICY<span class="dot">.</span></div>
+      <p class="footer-copy">© 2025 ICY. Crafted with obsession.
+        <br> Made By Ayushmaan
+      </p>
+      <a href="#hero" class="footer-back-top" aria-label="Back to top">
+        <i class='bx bx-up-arrow-alt'></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

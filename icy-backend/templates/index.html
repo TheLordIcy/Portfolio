@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ICY — Front End Developer</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
   <!-- Google Fonts: Syne (display) + Space Mono (mono accent) + DM Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -201,7 +201,7 @@
         <!-- Card 3 -->
         <article class="project-card" data-anim="fade-up" data-delay="200">
           <div class="project-img-wrap">
-            <img src="Images/Untitled.png"
+            <img src="{{ url_for('static', filename='Images/BMW M42.png') }}" alt="Unity Assets" class="project-img" />
                  alt="Agency Landing" class="project-img" />
             <div class="project-overlay">
               <a href="#" class="project-link-btn" aria-label="View project">
@@ -363,6 +363,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

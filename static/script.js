@@ -193,7 +193,7 @@ const barObserver = new IntersectionObserver((entries) => {
 skillBars.forEach(bar => barObserver.observe(bar));
 
 /* ──────────────────────────────────────────────
-   7. CONTACT FORM (Flask backend)
+   7. CONTACT FORM (Formspree)
 ────────────────────────────────────────────── */
 const form        = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
@@ -203,45 +203,41 @@ form.addEventListener('submit', async (e) => {
 
   const name    = form.name.value.trim();
   const email   = form.email.value.trim();
-  const subject = form.subject?.value.trim() ?? '';
   const message = form.message.value.trim();
 
   if (!name || !email || !message) {
-    [
-      !name    && form.name,
-      !email   && form.email,
-      !message && form.message,
-    ].filter(Boolean).forEach(field => {
-      field.style.borderColor = '#e05565';
-      setTimeout(() => (field.style.borderColor = ''), 1200);
-    });
+    [!name && form.name, !email && form.email, !message && form.message]
+      .filter(Boolean)
+      .forEach(field => {
+        field.style.borderColor = '#e05565';
+        setTimeout(() => (field.style.borderColor = ''), 1200);
+      });
     return;
   }
 
   const btn = form.querySelector('button[type="submit"]');
   btn.textContent = 'Sending…';
-  btn.disabled    = true;
+  btn.disabled = true;
 
   try {
-    const res  = await fetch('/contact', {
+    const res = await fetch('https://formspree.io/f/xzdobokr', {
       method:  'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify({ name, email, subject, message }),
+      headers: { 'Accept': 'application/json' },
+      body:    new FormData(form),
     });
-    const data = await res.json();
 
-    if (data.ok) {
+    if (res.ok) {
       form.reset();
       formSuccess.classList.add('show');
       setTimeout(() => formSuccess.classList.remove('show'), 5000);
     } else {
-      alert(data.errors?.[0] ?? 'Something went wrong.');
+      alert('Something went wrong. Please try again.');
     }
   } catch {
     alert('Network error — please try again.');
   } finally {
     btn.innerHTML = 'Send Message <i class="bx bx-send"></i>';
-    btn.disabled  = false;
+    btn.disabled = false;
   }
 });
 

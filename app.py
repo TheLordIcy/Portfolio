@@ -20,6 +20,9 @@ RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
 MAIL_TO        = os.environ.get("MAIL_TO", "")
 MAIL_FROM      = "onboarding@resend.dev"
 
+# ADD THIS LINE:
+logger.info("CONFIG — MAIL_TO: %s | API_KEY starts with: %s", MAIL_TO, RESEND_API_KEY[:6] if RESEND_API_KEY else "EMPTY")
+
 @app.route("/")
 def index():
     return render_template("index.html")

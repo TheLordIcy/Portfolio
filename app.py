@@ -17,7 +17,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
-MAIL_TO        = os.environ.get("MAIL_TO", "hello@icy.dev")
+MAIL_TO        = os.environ.get("MAIL_TO", "")
 MAIL_FROM      = "onboarding@resend.dev"
 
 @app.route("/")
